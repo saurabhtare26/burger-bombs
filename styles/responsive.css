@@ -1,0 +1,157 @@
+/* ============================================================
+   BURGER BOMBS — responsive.css
+   Mobile-first breakpoints: 1024px, 768px, 480px, 360px
+   ============================================================ */
+
+/* ── 1024px ──────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  .header        { padding: 24px 32px; }
+  .header.is-scrolled { padding: 16px 32px; }
+
+  .hero-burger   { width: 460px; }
+  .hero-glow     { width: 560px; }
+
+  .ingredient-wrap { width: 320px; }
+  .ingredient       { width: 300px; }
+
+  .story-panels  { left: 5%; width: 260px; }
+  .panel-headline { font-size: clamp(30px, 4vw, 52px); }
+
+  .philosophy-section { padding: 120px 32px; }
+  .phil-stats         { gap: 44px; }
+
+  .reassembly-inner   { gap: 52px; }
+  .reassembly-stage   { width: 360px; }
+
+  .popup-panel  { padding: 44px 36px 40px; }
+}
+
+/* ── 768px ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Header */
+  .header       { padding: 20px 24px; }
+  .header.is-scrolled { padding: 14px 24px; }
+  .logo-wordmark { display: none; }
+  .nav-link      { display: none; }
+
+  /* Hero */
+  .hero-content  { margin-top: 0; padding: 0 20px; }
+  .hero-burger   { width: 340px; max-width: 80vw; }
+  .hero-glow     { width: 420px; max-width: 95vw; }
+  .hero-smoke-wrap { width: 320px; }
+  .hero-streak   { display: none; }
+
+  /* Story */
+  .story-section { height: 450vh; }
+
+  .ingredient-wrap { width: 260px; }
+  .ingredient       { width: 240px; }
+
+  .story-panels {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: auto;
+    bottom: 10%;
+    text-align: center;
+    width: 80vw;
+  }
+
+  .story-progress { right: 16px; }
+
+  /* Philosophy */
+  .philosophy-section { padding: 96px 24px; }
+  .phil-stats         { gap: 32px; flex-wrap: wrap; justify-content: center; }
+  .phil-stat          { min-width: 120px; }
+  .phil-body          { font-size: 16px; }
+
+  /* Reassembly */
+  .reassembly-section { padding: 96px 24px; }
+  .reassembly-inner {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .reassembly-stage { width: 320px; max-width: 80vw; }
+  .reassembly-copy  { transform: none; max-width: 100%; }
+
+  /* CTA */
+  .cta-btn    { padding: 18px 44px; }
+
+  /* Footer */
+  .footer     { padding: 56px 24px 40px; }
+
+  /* Popup */
+  .popup-panel  { padding: 40px 24px 36px; max-width: 100%; }
+  .popup-title  { font-size: 26px; }
+  .popup-cards  { gap: 12px; }
+  .popup-card   { padding: 18px 20px; gap: 16px; }
+}
+
+/* ── 480px ───────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* Header */
+  .logo-mark   { width: 32px; height: 32px; font-size: 16px; }
+  .nav-cta     { padding: 8px 16px; font-size: 11px; }
+
+  /* Hero */
+  .hero-title  {
+    font-size: clamp(60px, 18vw, 84px);
+    gap: 0.04em;
+  }
+  .hero-sub    { font-size: 15px; }
+  .hero-burger { width: 280px; }
+  .hero-glow   { width: 360px; }
+
+  /* Story */
+  .story-section   { height: 500vh; }
+  .ingredient      { width: 200px; }
+  .ingredient-wrap { width: 220px; }
+  .story-panels    { bottom: 8%; }
+  .panel-headline  { font-size: clamp(28px, 7vw, 40px); }
+  .story-progress  { display: none; }
+
+  /* Philosophy */
+  .philosophy-section { padding: 80px 20px; }
+  .phil-stats         { gap: 24px; }
+  .stat-value         { font-size: clamp(32px, 8vw, 48px); }
+
+  /* Reassembly */
+  .reassembly-stage   { width: 280px; }
+  .reassembly-headline { font-size: clamp(36px, 8vw, 52px); }
+
+  /* CTA */
+  .cta-headline { font-size: clamp(60px, 17vw, 88px); margin-bottom: 48px; }
+  .cta-btn      { padding: 16px 36px; font-size: 12px; }
+
+  /* Footer */
+  .footer-logo     { font-size: 22px; }
+  .footer-mid      { flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .footer-sep      { display: none; }
+
+  /* Popup */
+  .popup-panel     { padding: 36px 18px 28px; border-radius: 16px; }
+  .card-platform   { font-size: 15px; }
+  .card-icon       { width: 38px; height: 38px; }
+}
+
+/* ── 360px ───────────────────────────────────────────────────── */
+@media (max-width: 360px) {
+
+  .hero-title { font-size: 52px; }
+  .hero-burger { width: 240px; }
+  .ingredient  { width: 176px; }
+  .stat-value  { font-size: 30px; }
+  .cta-headline { font-size: 52px; }
+}
+
+/* ── Landscape short screens ─────────────────────────────────── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { height: auto; min-height: 100svh; padding: 80px 24px 60px; }
+  .hero-burger { width: 200px; max-width: 30vw; }
+  .story-sticky { height: 100svh; }
+  .cta-section { height: auto; padding: 80px 24px; }
+  .hero-scroll-cue { display: none; }
+}
